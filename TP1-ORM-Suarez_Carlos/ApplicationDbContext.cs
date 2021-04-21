@@ -16,7 +16,7 @@ namespace TP1_ORM_Suarez_Carlos
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server = TATU; Database = ORM_MenuRestaurant ; Trusted_Connection = True; MultipleActiveResultSets = True");
+            optionsBuilder.UseSqlServer("server = localhost; Database = ORM_MenuRestaurant ; Trusted_Connection = True; MultipleActiveResultSets = True");
         }
 
     }
