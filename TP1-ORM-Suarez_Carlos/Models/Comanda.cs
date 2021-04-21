@@ -10,11 +10,14 @@ namespace TP1_ORM_Suarez_Carlos.Models
     {
         [Key][Required]
         public Guid ComandaId { get; set; }
-        [Required][ForeignKey("FormaEntregaId")]
+        [Required]
         public int FormaEntregaId { get; set; }
+        [ForeignKey("FormaEntregaId")]
+        public FormaEntrega FormaEntrega { get; set; }
         [Required]
         public int PrecioTotal { get; set; }
         [Required]
         public DateTime Fecha { get; set; }
+        public List<ComandaMercaderia> ComandaMercaderia { get; set; }
     }
 }

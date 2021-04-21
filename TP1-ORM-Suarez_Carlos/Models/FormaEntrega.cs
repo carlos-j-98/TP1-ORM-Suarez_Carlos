@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TP1_ORM_Suarez_Carlos.Models
 {
-    class FormaEntrega
+    public class FormaEntrega
     {
         [Key][Required]
         public int FormaEntregaId { get; set; }

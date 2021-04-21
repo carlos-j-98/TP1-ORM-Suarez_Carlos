@@ -6,13 +6,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TP1_ORM_Suarez_Carlos.Models
 {
-    class ComandaMercaderia
+    public class ComandaMercaderia
     {
-        [Required][ForeignKey("MercaderiaId")]
-        public int MercaderiaId { get; set;}
-        [Required][ForeignKey("ComandaId")]
-        public Guid ComandaId { get; set; }
+
         [Key][Required]
         public int ComandaMercaderiaId { get; set; }
+        [Required]
+        public int MercaderiaId { get; set; }
+        [ForeignKey("MercaderiaId")]
+        public Mercaderia Mercaderia { get; set; }
+        [Required]
+        public Guid ComandaId { get; set; }
+        [ForeignKey("ComandaId")]
+        public Comanda Comanda { get; set; }
     }
 }

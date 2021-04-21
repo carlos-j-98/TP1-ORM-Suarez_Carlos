@@ -9,7 +9,7 @@ namespace TP1_ORM_Suarez_Carlos.Models
     public class TipoMercaderia
     {
         [Key][Required]
-        public TipoMercaderia TipoMercaderiaId { get; set; }
+        public int TipoMercaderiaId { get; set; }
         [Required]
         public string Descripcion { get; set; }
     }
