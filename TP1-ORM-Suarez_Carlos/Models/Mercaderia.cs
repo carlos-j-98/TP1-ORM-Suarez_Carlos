@@ -9,11 +9,13 @@ namespace TP1_ORM_Suarez_Carlos.Models
     public class Mercaderia
     {
         [Key][Required]
-        public Mercaderia MercaderiaId { get; set; }
+        public int MercaderiaId { get; set; }
         [Required]
         public string Nombre { get; set;}
+        [Required]
+        public int TipoMercaderiaId { get; set; }
         [Required][ForeignKey("TipoMercaderiaId")]
-        public int TipomercaderiaId { get; set;}
+        public TipoMercaderia TipoMercaderia { get; set; }
         [Required]
         public int Precio { get; set; }
         [Required]
@@ -22,5 +24,6 @@ namespace TP1_ORM_Suarez_Carlos.Models
         public string Preparacion { get; set;}
         [Required]
         public string Imagen { get; set; }
+        public List<ComandaMercaderia> ComandaMercaderia { get; set; }
     }
 }
